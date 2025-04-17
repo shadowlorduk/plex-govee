@@ -40,8 +40,9 @@ The `server.js` from the original [plex-webhook-proxy](https://github.com/jfklin
     * `ALLOWED_CLIENT_IDS`: A comma-separated list of Plex client IDs that are allowed to send webhooks.
     * `LOG_LEVEL`: The log level for the proxy server (e.g., `info`, `debug`, `warn`, `error`).
 
-### Process to Obtain Plex Client IDs
-
+### Process to Obtain Plex Client ID
+<details>
+   <summary>Click to show Process to Obtain Plex Client IDs</summary>
 To set up the allowed Plex client IDs, follow these steps:
 
 1. **Log in to Plex**:
@@ -57,6 +58,7 @@ To set up the allowed Plex client IDs, follow these steps:
    - Include the desired client IDs in the `ALLOWED_CLIENT_IDS` environment variable in your Node.js proxy configuration as a comma-separated list.
 
 By completing these steps, you can restrict access to your Plex webhooks to specific devices.
+</details>
 
 2.  **Docker Deployment (Optional):**
     * Build the Docker image: `docker build -t plex-govee .`
