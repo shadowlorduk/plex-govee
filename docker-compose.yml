@@ -1,0 +1,16 @@
+services:
+  plex-govee:
+    image: plex-govee
+    build: .
+    container_name: plex-govee
+    restart: unless-stopped
+    networks:
+      - proxy # Select Network
+    volumes:
+      - ./:/app 
+    environment:
+      - POST_URL=  # Your Cloud Function URL
+      - ALLOWED_CLIENT_IDS= # Plex Client ID
+      - LOG_LEVEL=warn # Set log level 
+    ports:
+      - "10000:8080"  # Expose port 10000 on your server, mapping to 8080 in the container
